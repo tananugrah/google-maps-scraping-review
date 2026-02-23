@@ -63,6 +63,15 @@ def extract_place_id_from_url(url):
         
     return None
 
+def extract_lat_long_from_url(url):
+    """Extract Latitude and Longitude from Google Maps URL."""
+    # Pattern: /@(-?\d+\.\d+),(-?\d+\.\d+)
+    # Example: /@-6.2381042,106.7661399,17z/
+    match = re.search(r'@(-?\d+\.\d+),(-?\d+\.\d+)', url)
+    if match:
+        return float(match.group(1)), float(match.group(2))
+    return None, None
+
 def load_selectors(file_path="config/selectors.json"):
     """Load selectors from JSON file."""
     try:

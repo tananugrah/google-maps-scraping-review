@@ -31,6 +31,8 @@ class DataProcessor:
                 'place_id': review.get('place_id'),
                 'place_url': review.get('place_url'),
                 'nama_tempat': review.get('nama_tempat'),
+                'latitude': place_details.get('latitude'),
+                'longitude': place_details.get('longitude'),
                 'description': place_details.get('description'),
                 'is_spending': place_details.get('is_spending'),
                 'reviews': place_details.get('ulasan_total'),
@@ -76,7 +78,7 @@ class DataProcessor:
         df = pd.DataFrame(data)
         # Ensure correct column order
         cols = [
-            'place_id', 'place_url', 'nama_tempat', 'address', 'description', 'is_spending',
+            'place_id', 'place_url', 'nama_tempat', 'latitude', 'longitude', 'address', 'description', 'is_spending',
             'reviews', 'total_reviews', 'competitors', 'website', 'can_claim', 'owner', 'featured_image',
             'main_category', 'categories', 'total_rating', 'review_rating', 'workday_timing', 'is_temporarily_closed',
             'is_permanently_closed', 'closed_on', 'phone', 'review_id', 'review_keywords',

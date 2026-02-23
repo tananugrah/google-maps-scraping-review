@@ -2,7 +2,7 @@ import time
 import random
 import os
 import re
-from src.utils import random_delay, load_selectors, extract_place_id_from_url
+from src.utils import random_delay, load_selectors, extract_place_id_from_url, extract_lat_long_from_url
 from src.logger_handler import setup_logger
 
 logger = setup_logger()
@@ -70,10 +70,14 @@ class GoogleMapsScraper:
         if not place_id:
             place_id = extract_place_id_from_url(self.page.url)
 
+        lat, lng = extract_lat_long_from_url(self.page.url)
+
         details = {
             'place_id': place_id,
             'place_url': self.page.url,
             'nama_tempat': name,
+            'latitude': lat,
+            'longitude': lng,
             'rating_total': None,
             'ulasan_total': None,
             'alamat': None,
