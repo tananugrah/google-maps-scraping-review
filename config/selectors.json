@@ -1,0 +1,39 @@
+{
+    "search": {
+        "input": "input[name='q']",
+        "recommendation_item": "div.Nv2PK",
+        "recommendation_link": "a.hfpxzc"
+    },
+    "place_details": {
+        "name": "h1.DUwDvf",
+        "rating": "div.F7nice span[aria-hidden='true']",
+        "reviews_count": "div.F7nice span[aria-label*='ulasan']",
+        "address": "[data-item-id='address']",
+        "website": "[data-item-id='authority']",
+        "phone": "[data-item-id^='phone']"
+    },
+    "reviews": {
+        "tab_button": "button[role='tab'][aria-label*='Ulasan'], button:has-text('Ulasan'), div[role='tab']:has-text('Ulasan')",
+        "sort_button": "button[aria-label='Urutkan ulasan'], button[data-value='Urutkan']",
+        "sort_newest": "div[role='menuitem'] >> text=Terbaru, div[role='menuitemradio'] >> text=Terbaru",
+        "container": "div.m6QErb.DxyBCb.kA9KIf.dS8AEf[tabindex='-1'], div[role='main'] > div.m6QErb[tabindex='-1']",
+        "item": "div.jftiEf",
+        "author": "div.d4r55",
+        "rating": "span.kvMYJc",
+        "text": "span.wiI7pd",
+        "date": "span.rsqaWe",
+        "more_button": "button.w8nwRe",
+        "more_reviews_button": "button[aria-label^='Ulasan lainnya']",
+        "owner_reply": "div.wiI7pd"
+    },
+    "xpath_fallbacks": {
+        "name": "xpath=//h1[contains(@class, 'DUwDvf')]",
+        "address": "xpath=//button[@data-item-id='address']",
+        "website": "xpath=//a[@data-item-id='authority']",
+        "phone": "xpath=//button[starts-with(@data-item-id, 'phone')]",
+        "rating": "xpath=//div[contains(@class, 'F7nice')]//span[@aria-hidden='true']",
+        "reviews_count": "xpath=//div[contains(@class, 'F7nice')]//span[contains(@aria-label, 'ulasan')]",
+        "sort_button": "xpath=//button[@aria-label='Urutkan ulasan']",
+        "sort_newest": "xpath=(//div[@role='menuitem'])[2]"
+    }
+}
